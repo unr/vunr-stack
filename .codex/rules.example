@@ -1,0 +1,44 @@
+# Copy into your active Codex rules config only if desired.
+# Keep this repo's default light. Superpowers should handle normal workflow discipline.
+
+prefix_rule(
+    pattern = ["pnpm", "lint"],
+    decision = "allow",
+    justification = "Linting is a safe local verification command.",
+    match = ["pnpm lint"],
+)
+
+prefix_rule(
+    pattern = ["pnpm", "typecheck"],
+    decision = "allow",
+    justification = "Typechecking is a safe local verification command.",
+    match = ["pnpm typecheck"],
+)
+
+prefix_rule(
+    pattern = ["pnpm", "test:run"],
+    decision = "allow",
+    justification = "Unit tests are a safe local verification command.",
+    match = ["pnpm test:run"],
+)
+
+prefix_rule(
+    pattern = ["pnpm", "verify"],
+    decision = "allow",
+    justification = "Project verification is expected before finishing meaningful changes.",
+    match = ["pnpm verify"],
+)
+
+prefix_rule(
+    pattern = ["pnpm", "add"],
+    decision = "prompt",
+    justification = "New dependencies require human review.",
+    match = ["pnpm add zod", "pnpm add -D playwright"],
+)
+
+prefix_rule(
+    pattern = ["rm"],
+    decision = "prompt",
+    justification = "File deletion should be reviewed.",
+    match = ["rm file.ts", "rm -rf .nuxt"],
+)

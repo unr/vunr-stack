@@ -1,0 +1,17 @@
+# Copy relevant sections into ~/.codex/config.toml.
+# Do not commit personal tokens.
+
+# Context7 MCP
+[mcp_servers.context7]
+command = "npx"
+args = ["-y", "@upstash/context7-mcp"]
+startup_timeout_sec = 20
+tool_timeout_sec = 60
+
+# Optional, only if you use a Context7 API key for higher limits.
+# env_vars = ["CONTEXT7_API_KEY"]
+
+# Suggested default posture.
+# Keep destructive actions and dependency installation reviewed.
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
