@@ -1,0 +1,36 @@
+{
+  "name": "vunr",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:unit": "vitest --project unit",
+    "test:nuxt": "vitest --project nuxt"
+  },
+  "dependencies": {
+    "@nuxt/content": "3.14.0",
+    "@nuxt/eslint": "1.15.2",
+    "@nuxt/scripts": "1.2.1",
+    "@nuxt/test-utils": "4.0.3",
+    "@nuxt/ui": "4.8.2",
+    "@unhead/vue": "^2.1.15",
+    "better-sqlite3": "^12.10.0",
+    "eslint": "^10.4.1",
+    "nuxt": "^4.4.7",
+    "tailwindcss": "^4.3.0",
+    "typescript": "^5.9.3",
+    "vue": "^3.5.35",
+    "vue-router": "^5.1.0"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "^2.4.11",
+    "happy-dom": "^20.10.1",
+    "vitest": "^4.1.8"
+  }
+}
