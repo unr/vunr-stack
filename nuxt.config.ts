@@ -2,12 +2,15 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  css: ['~/assets/css/main.css'],
 
   modules: [
     '@nuxt/content',
     '@nuxt/eslint',
+    '@nuxt/test-utils/module',
     '@nuxt/scripts',
-    '@nuxt/test-utils',
+    '@pinia/nuxt',
+    '@vueuse/nuxt',
     '@nuxt/ui'
   ]
 })
