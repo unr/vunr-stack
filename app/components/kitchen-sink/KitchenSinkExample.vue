@@ -6,7 +6,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="rounded-md border border-default bg-elevated/45 p-4">
+  <div class="rounded-lg border border-default bg-elevated/60 p-4">
     <div v-if="title || description" class="mb-4 space-y-1">
       <h3 class="text-sm font-semibold text-highlighted">
         {{ title }}

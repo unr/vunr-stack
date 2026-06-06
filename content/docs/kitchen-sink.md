@@ -14,7 +14,7 @@ It includes ordinary prose, a short list, inline `code`, a blockquote, and a fen
 
 - Content is loaded through `queryCollection`.
 - Rendering uses `ContentRenderer`.
-- Prose styles inherit the warm neutral theme.
+- Prose styles inherit the neutral dark shell tokens.
 
 > Content examples should stay small enough to review quickly.
 

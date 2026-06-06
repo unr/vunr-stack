@@ -2,29 +2,24 @@ import { describe, expect, it } from 'vitest'
 import {
   kitchenSinkPages,
   primaryPalette,
-  warmNeutralPalette,
+  surfaceTokens,
 } from '../../shared/kitchenSink'
 
 describe('kitchen sink metadata', () => {
   it('lists the expected browsable demo pages in order', () => {
     expect(kitchenSinkPages.map(page => page.path)).toEqual([
-      '/kitchen-sink/theme',
-      '/kitchen-sink/typography',
-      '/kitchen-sink/buttons',
+      '/kitchen-sink/foundation',
+      '/kitchen-sink/components',
       '/kitchen-sink/forms',
-      '/kitchen-sink/cards',
-      '/kitchen-sink/navigation',
-      '/kitchen-sink/feedback',
-      '/kitchen-sink/overlays',
       '/kitchen-sink/data',
+      '/kitchen-sink/overlays',
       '/kitchen-sink/content',
-      '/kitchen-sink/icons',
+      '/kitchen-sink/app-shell',
     ])
   })
 
-  it('exposes complete theme palettes for visual inspection', () => {
+  it('exposes neutral theme tokens for visual inspection', () => {
     expect(primaryPalette).toHaveLength(11)
-    expect(warmNeutralPalette).toHaveLength(11)
     expect(primaryPalette.map(swatch => swatch.shade)).toEqual([
       50,
       100,
@@ -38,7 +33,13 @@ describe('kitchen sink metadata', () => {
       900,
       950,
     ])
-    expect(primaryPalette.find(swatch => swatch.shade === 500)?.hex).toBe('#e86f1a')
-    expect(warmNeutralPalette.find(swatch => swatch.shade === 950)?.hex).toBe('#120d0b')
+    expect(primaryPalette.find(swatch => swatch.shade === 500)?.cssColor).toBe('oklch(0.62 0.005 286)')
+    expect(surfaceTokens.map(token => token.label)).toEqual([
+      'Page',
+      'Sidebar',
+      'Panel',
+      'Popover',
+      'Raised',
+    ])
   })
 })

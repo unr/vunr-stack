@@ -1,13 +1,13 @@
 export default defineAppConfig({
   ui: {
     colors: {
-      primary: 'burnt-orange',
-      secondary: 'teal',
+      primary: 'neutral',
+      secondary: 'zinc',
       success: 'green',
       info: 'sky',
       warning: 'amber',
       error: 'red',
-      neutral: 'warm-neutral',
+      neutral: 'neutral',
     },
   },
 })

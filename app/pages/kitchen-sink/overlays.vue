@@ -9,7 +9,7 @@ useSeoMeta({
 const dropdownItems: DropdownMenuItem[][] = [
   [
     { label: 'Copy link', icon: 'i-lucide-copy' },
-    { label: 'Open theme page', icon: 'i-lucide-palette', to: '/kitchen-sink/theme' },
+    { label: 'Open foundation page', icon: 'i-lucide-swatch-book', to: '/kitchen-sink/foundation' },
   ],
   [
     { label: 'Delete draft', icon: 'i-lucide-trash-2', color: 'error' },
@@ -19,7 +19,7 @@ const dropdownItems: DropdownMenuItem[][] = [
 const accordionItems = [
   { label: 'Modal', icon: 'i-lucide-maximize-2', content: 'Use for focused decisions that need interruption.' },
   { label: 'Popover', icon: 'i-lucide-message-square', content: 'Use for lightweight contextual controls.' },
-  { label: 'Tooltip', icon: 'i-lucide-message-circle-question', content: 'Use to name compact icon controls.' },
+  { label: 'Tooltip', icon: 'i-lucide-message-circle-question-mark', content: 'Use to name compact icon controls.' },
 ]
 </script>
 
@@ -32,7 +32,7 @@ const accordionItems = [
     <KitchenSinkSection title="Dialog surfaces" description="Modal and slideover examples rely on Nuxt UI focus and escape handling.">
       <div class="grid gap-4 lg:grid-cols-2">
         <KitchenSinkExample title="Modal">
-          <UModal title="Confirm theme note" description="A compact modal for one focused decision.">
+          <UModal title="Confirm shell note" description="A compact modal for one focused decision.">
             <UButton icon="i-lucide-maximize-2">
               Open modal
             </UButton>
@@ -66,7 +66,7 @@ const accordionItems = [
             <template #body>
               <div class="space-y-3 text-sm leading-6 text-muted">
                 <p>Slideovers work well for route-adjacent settings and preview details.</p>
-                <UAlert color="primary" variant="soft" title="Design note" description="Keep slideovers scoped and easy to dismiss." />
+                <UAlert color="neutral" variant="soft" title="Design note" description="Keep slideovers scoped and easy to dismiss." />
               </div>
             </template>
           </USlideover>
@@ -98,7 +98,7 @@ const accordionItems = [
 
         <KitchenSinkExample title="Dropdown menu">
           <UDropdownMenu :items="dropdownItems">
-            <UButton color="neutral" variant="outline" icon="i-lucide-more-horizontal">
+            <UButton color="neutral" variant="outline" icon="i-lucide-ellipsis">
               Actions
             </UButton>
           </UDropdownMenu>

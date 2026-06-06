@@ -30,6 +30,9 @@ models, or billing infrastructure by default.
 
 - `/` - minimal home page that links into the starter examples.
 - `/kitchen-sink` - entry point for reusable examples and smoke pages.
+- `/kitchen-sink/foundation` - neutral dark design tokens and semantic states.
+- `/kitchen-sink/components` - compact Nuxt UI component examples.
+- `/kitchen-sink/app-shell` - product shell showcase for the starter UI direction.
 - `/kitchen-sink/agent-verification` - a focused smoke page that touches Nuxt UI,
   Pinia, VueUse, Lucide icons, Nuxt Content, and the starter test contract.
 

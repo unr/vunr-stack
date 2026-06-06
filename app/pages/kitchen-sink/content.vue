@@ -73,5 +73,24 @@ useSeoMeta({
         </KitchenSinkExample>
       </div>
     </KitchenSinkSection>
+
+    <KitchenSinkSection title="Prose treatments" description="Code, callouts, and inline prose use the same neutral shell tokens.">
+      <div class="grid gap-4 lg:grid-cols-2">
+        <KitchenSinkExample title="Code sample">
+          <pre class="overflow-x-auto rounded-md border border-default bg-inverted p-4 text-sm text-inverted"><code>const route = '/kitchen-sink/content'
+const shell = 'neutral-dark'</code></pre>
+        </KitchenSinkExample>
+
+        <KitchenSinkExample title="Callout">
+          <UAlert
+            icon="i-lucide-file-text"
+            color="neutral"
+            variant="soft"
+            title="Content stays local"
+            description="This starter keeps Nuxt Content as a typed fixture and does not add a docs product layer."
+          />
+        </KitchenSinkExample>
+      </div>
+    </KitchenSinkSection>
   </KitchenSinkPage>
 </template>
