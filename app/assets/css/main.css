@@ -1,8 +1,66 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
+@theme static {
+  --color-burnt-orange-50: #fff7ed;
+  --color-burnt-orange-100: #ffedd5;
+  --color-burnt-orange-200: #fed7aa;
+  --color-burnt-orange-300: #fdba74;
+  --color-burnt-orange-400: #fb923c;
+  --color-burnt-orange-500: #e86f1a;
+  --color-burnt-orange-600: #c75612;
+  --color-burnt-orange-700: #9f4212;
+  --color-burnt-orange-800: #7f3513;
+  --color-burnt-orange-900: #642c12;
+  --color-burnt-orange-950: #341407;
+
+  --color-warm-neutral-50: #faf7f2;
+  --color-warm-neutral-100: #f1ebe3;
+  --color-warm-neutral-200: #e5d8ca;
+  --color-warm-neutral-300: #d1bda9;
+  --color-warm-neutral-400: #aa8f78;
+  --color-warm-neutral-500: #866c58;
+  --color-warm-neutral-600: #654f41;
+  --color-warm-neutral-700: #4b3b31;
+  --color-warm-neutral-800: #332923;
+  --color-warm-neutral-900: #211b18;
+  --color-warm-neutral-950: #120d0b;
+}
+
 html {
   color-scheme: light dark;
+}
+
+:root,
+:host {
+  --ui-radius: 0.25rem;
+  --ui-container: 74rem;
+}
+
+:root,
+:host,
+.light {
+  --ui-bg: var(--ui-color-neutral-50);
+  --ui-bg-muted: var(--ui-color-neutral-100);
+  --ui-bg-elevated: color-mix(in oklab, var(--ui-color-neutral-50) 74%, var(--ui-color-primary-50));
+  --ui-bg-accented: var(--ui-color-primary-100);
+  --ui-bg-inverted: var(--ui-color-neutral-900);
+  --ui-border: var(--ui-color-neutral-200);
+  --ui-border-muted: color-mix(in oklab, var(--ui-color-neutral-200) 70%, var(--ui-color-primary-100));
+  --ui-border-accented: var(--ui-color-primary-300);
+  --ui-text-highlighted: var(--ui-color-neutral-950);
+}
+
+.dark {
+  --ui-bg: var(--ui-color-neutral-950);
+  --ui-bg-muted: var(--ui-color-neutral-900);
+  --ui-bg-elevated: color-mix(in oklab, var(--ui-color-neutral-900) 88%, var(--ui-color-primary-950));
+  --ui-bg-accented: color-mix(in oklab, var(--ui-color-neutral-800) 78%, var(--ui-color-primary-900));
+  --ui-bg-inverted: var(--ui-color-neutral-100);
+  --ui-border: var(--ui-color-neutral-800);
+  --ui-border-muted: color-mix(in oklab, var(--ui-color-neutral-800) 70%, var(--ui-color-primary-900));
+  --ui-border-accented: var(--ui-color-primary-800);
+  --ui-text-highlighted: var(--ui-color-neutral-50);
 }
 
 body {
@@ -30,4 +88,36 @@ body {
   margin-block: 0.5rem;
   padding-inline-start: 1.25rem;
   list-style: disc;
+}
+
+.agent-prose blockquote {
+  margin-block: 0.75rem;
+  border: 1px solid var(--ui-border-accented);
+  border-radius: var(--radius-md);
+  background: var(--ui-bg-elevated);
+  padding: 0.75rem 1rem;
+  color: var(--ui-text-toned);
+}
+
+.agent-prose code {
+  border-radius: var(--radius-xs);
+  background: var(--ui-bg-accented);
+  padding: 0.125rem 0.25rem;
+  color: var(--ui-text-highlighted);
+  font-size: 0.875em;
+}
+
+.agent-prose pre {
+  overflow-x: auto;
+  border: 1px solid var(--ui-border);
+  border-radius: var(--radius-md);
+  background: var(--ui-bg-inverted);
+  padding: 1rem;
+  color: var(--ui-text-inverted);
+}
+
+.agent-prose pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
 }
