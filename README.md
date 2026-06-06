@@ -1,6 +1,10 @@
-# unr-stack
+# vunr-stack
 
-`unr-stack` is a Codex-first Nuxt/Vue starter for personal sites, hobby projects,
+```
+vue x unr
+```
+
+`vunr-stack` is a Codex-first Nuxt/Vue starter for personal sites, hobby projects,
 interview coding sessions, and small polished web apps.
 
 It is intentionally compact: Nuxt conventions, typed Vue, accessible Nuxt UI
